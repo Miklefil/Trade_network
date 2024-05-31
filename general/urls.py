@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from general.apps import MainConfig
+from general.apps import GeneralConfig
 from general.views import ProviderViewSet, NetworkViewSet, ProductViewSet
 
-app_name = MainConfig.name
+app_name = GeneralConfig.name
 
 router = DefaultRouter()
 router.register(r'provider', ProviderViewSet, basename='provider')
